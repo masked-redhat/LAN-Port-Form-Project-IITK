@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LAN Port Requisition Form</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+          rel="stylesheet" />
+
+  <style>
+    #LANPortForm * {
+      font-size: 36px;
+    }
+
+    .d-flex {
+      display: flex !important;
+    }
+
+    .flex-column {
+      flex-direction: column !important;
+    }
+
+    .align-items-center {
+      align-items: center !important;
+    }
+
+    .pt-4 {
+      padding-top: 1.5rem !important;
+    }
+
+    .px-4 {
+      padding-right: 1.5rem !important;
+      padding-left: 1.5rem !important;
+    }
+
+    .m-auto {
+      margin: auto !important;
+    }
+
+    .mb-3 {
+      margin-bottom: 1rem !important;
+    }
+
+    .text-center {
+      text-align: center !important;
+    }
+
+    * {
+      border: 0;
+    }
+
+    .futto {
+      margin-left: 20px;
+    }
+
+    .zutto {
+      display: flex;
+      margin-bottom: 34px;
+    }
+
+    .w-75 {
+      width: 655px;
+    }
+
+    .span-bold {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+<div class="d-flex flex-column align-items-center pt-4 px-4 m-auto">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwbbMz-P0ZeAxxp-NZKorARVzE-aniCQd2dQ&s"
+       alt="Indian Institute of Technology Kanpur" width="85" class="mb-3" />
+  <h1 class="text-uppercase text-center">
+    Indian Institute of Technology Kanpur
+  </h1>
+  <h2 class="text-center">Computer Centre</h2>
+</div>
+
+<div class="mt-3">
+  <div class="d-flex flex-column">
+    <div>
+      <h3 class="fw-semibold fs-4 text-center mb-3">
+        Internet Port Requisition Form
+      </h3>
+    </div>
+
+    <div id="LANPortForm" class="w-75 m-auto">
+      <div class="zutto">
+        <span class="span-bold">Name</span>
+        <div class="futto">{{name}}</div>
+      </div>
+
+      <div class="zutto">
+        <span class="span-bold">Phone/Mobile No.</span>
+        <div class="futto">{{phone}}</div>
+      </div>
+
+      <div class="zutto">
+        <span class="span-bold">Dept. / Unit</span>
+        <div class="futto">{{unit}}</div>
+      </div>
+
+      <div class="zutto">
+        <span class="span-bold">PF No.</span>
+        <div class="futto">{{pfNumber}}</div>
+
+      </div>
+
+      <div class="zutto">
+        <span class="span-bold">Email</span>
+        <div class="futto">{{email}}</div>
+      </div>
+
+      <div class="zutto">
+        <span class="span-bold">Short Description</span>
+        <div class="futto" style="word-wrap: break-word;">{{description}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

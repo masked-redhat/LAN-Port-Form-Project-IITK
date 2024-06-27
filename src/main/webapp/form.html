@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LAN Port Requisition Form</title>
+
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+    />
+
+    <!-- Fonts - Titillium Web -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+            rel="stylesheet"
+    />
+
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+            defer
+    ></script>
+
+    <style>
+        * {
+            font-family: "Titillium Web", sans-serif !important;
+            /* border: 1px red solid; */
+        }
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            text-transform: none;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            text-transform: none;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            text-transform: none;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            text-transform: none;
+        }
+        ::placeholder { /* Recent browsers */
+            text-transform: none;
+        }
+        #LANPortForm{
+            max-width: 1050px;
+        }
+    </style>
+</head>
+
+<body>
+<header class="d-flex flex-column align-items-center pt-4 px-4 m-auto">
+    <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwbbMz-P0ZeAxxp-NZKorARVzE-aniCQd2dQ&s"
+            alt="Indian Institute of Technology Kanpur"
+            width="85"
+            class="mb-3"
+    />
+    <h1 class="fs-2 fw-bold text-uppercase mb-0 text-center">
+        Indian Institute of Technology Kanpur
+    </h1>
+    <h2 class="text-center fs-3 mb-4">Computer Centre</h2>
+</header>
+
+<main class="mt-3">
+    <section class="d-flex flex-column">
+        <header>
+            <h3 class="fw-semibold fs-4 text-center mb-3">
+                Internet Port Requisition Form
+            </h3>
+        </header>
+
+        <form id="LANPortForm" class="w-75 m-auto" action="/lanport" method="post">
+            <div id="nameContainer" class="input-group mb-3">
+                <span class="input-group-text xl fw-semibold">Name</span>
+                <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-control"
+                        placeholder="Name"
+                        aria-label="Name"
+                        aria-describedby="Name"
+                        required
+                />
+            </div>
+
+            <div id="phoneContainer" class="input-group mb-3">
+                <span class="input-group-text fw-semibold">Phone/Mobile No.</span>
+                <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        class="form-control"
+                        placeholder="Mobile Number"
+                        aria-label="Mobile Number"
+                        aria-describedby="Mobile Number"
+                        size="20"
+                        minlength="10"
+                        maxlength="14"
+                        required
+                />
+            </div>
+
+            <div id="unitContainer" class="input-group mb-3">
+                <span class="input-group-text xl fw-semibold">Dept. / Unit</span>
+                <input
+                        id="unit"
+                        name="unit"
+                        type="text"
+                        class="form-control"
+                        placeholder="Department"
+                        aria-label="Department"
+                        aria-describedby="Department"
+                        required
+                />
+            </div>
+
+            <div id="pfNumberContainer" class="input-group mb-3">
+                <span class="input-group-text xl fw-semibold">PF No.</span>
+                <input
+                        id="pfNumber"
+                        name="pfNumber"
+                        type="text"
+                        class="form-control text-uppercase"
+                        placeholder="PF Number"
+                        aria-label="PF Number"
+                        aria-describedby="PF Number"
+                        maxlength="22"
+                        required
+                />
+            </div>
+
+            <div id="emailContainer" class="input-group mb-3">
+                <span class="input-group-text fw-semibold">Email</span>
+                <input
+                        id="email"
+                        name="email"
+                        type="text"
+                        class="form-control"
+                        placeholder="Email"
+                        aria-label="Email"
+                        aria-describedby="IIT Kanpur Email"
+                        required
+                />
+                <span class="input-group-text fw-semibold">@iitk.ac.in</span>
+            </div>
+
+            <div id="descriptionContainer" class="form-control mb-3 m-0 p-0">
+                <label
+                        for="requestDescription"
+                        class="form-label fw-semibold px-2 border-bottom w-100 py-2 mb-0"
+                >Short Description</label
+                >
+                <textarea
+                        name="description"
+                        class="form-control rounded-0 border-0 rounded-bottom"
+                        placeholder="Short description of the request highlighting the location and the number of ports required"
+                        id="requestDescription"
+                        style="height: 130px"
+                        required
+                ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>
